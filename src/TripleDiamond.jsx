@@ -19,7 +19,7 @@ function TripleDiamond() {
       <div className="container">
         <div className="container-triple">
           <h2 className="text-above">Research</h2>
-          <div className="triple-diamond"onClick={() => showInfo("research")}>
+          <div className="triple-diamond" onClick={() => showInfo("research")}>
             <div className="arrow-left" ></div>
             <div className="arrow-right"></div>
           </div>
