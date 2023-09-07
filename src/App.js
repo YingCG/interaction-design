@@ -5,7 +5,7 @@ import TripleDiamond from "./TripleDiamond";
 function App() {
   return (
     <div className="App">
-      Interaction Design
+      {/* <h1>Interaction Design</h1> */}
       <TripleDiamond />
     </div>
   );

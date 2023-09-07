@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import contents from "./data";
+import contents from "./informations";
 import ProjectOverview from "./ProjectOverview";
+import Research from "./Research";
 
 function TripleDiamond() {
   const [info, setInfo] = useState([]);
 
-  function showInfo() {
-    console.log(contents);
-    setInfo(
-      contents.map((info, index) => <ProjectOverview key={index} {...info} />)
-    );
+  function showInfo(index) {
+    console.log(contents[index]);
+    setInfo(contents[index]);
   }
-  // const showInfo = () => {
-
-  // }
 
   return (
     <>
@@ -22,30 +18,33 @@ function TripleDiamond() {
       </div>
       <div className="container">
         <div className="container-triple">
-          <div className="text-above">Research</div>
-          <div className="triple-diamond">
-            <div className="arrow-left" onClick={showInfo}></div>
+          <h2 className="text-above">Research</h2>
+          <div className="triple-diamond"onClick={() => showInfo("research")}>
+            <div className="arrow-left" ></div>
             <div className="arrow-right"></div>
           </div>
         </div>
 
         <div className="container-triple">
-          <div className="text-above">Experiment</div>
-          <div className="triple-diamond">
-            <div className="arrow-left"></div>
+          <h2 className="text-above">Experiment</h2>
+          <div className="triple-diamond" onClick={() => showInfo("experiment")}>
+            <div className="arrow-left" ></div>
             <div className="arrow-right"></div>
           </div>
         </div>
 
         <div className="container-triple">
-          <div className="text-above">Testing</div>
-          <div className="triple-diamond">
-            <div className="arrow-left"></div>
+          <h2 className="text-above">Testing</h2>
+          <div className="triple-diamond" onClick={() => showInfo("prototype")}>
+            <div className="arrow-left" ></div> 
             <div className="arrow-right"></div>
           </div>
         </div>
       </div>
-      <div className="information">{info}</div>
+      <div className="information">
+        {info.map(thing => <ProjectOverview {...thing} />)}
+        {/* {info.map(thing => <Research thing={{...thing}} />)} */}
+      </div>
     </>
   );
 }
