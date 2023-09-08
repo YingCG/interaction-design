@@ -18,16 +18,16 @@ function TripleDiamond() {
       <div className="container">
         {
           contents.map((content, i) => i !== 0 && 
-          (<div className="container-triple">
-          <h2 className="text-above">{content.MenuItem}</h2>
-          <div
-            className="triple-diamond"
-            onClick={() => setInfo(contents[i])}
-          >
-            <div className="arrow-left"></div>
-            <div className="arrow-right"></div>
-          </div>
-        </div>)
+              (<div className="container-triple">
+              <h2 className="text-above">{content.MenuItem}</h2>
+              <div
+                className="triple-diamond"
+                onClick={() => setInfo(content)}
+              >
+                <div className="arrow-left"></div>
+                <div className="arrow-right"></div>
+              </div>
+            </div>)
           )
         }
       </div>
