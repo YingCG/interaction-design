@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+  padding: 1em;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 23rem solid transparent;
+  border-bottom: 23rem solid transparent;
+
+  border-left: 23rem solid green;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 23rem solid transparent;
+  border-bottom: 23rem solid transparent;
+
+  border-right: 23rem solid blue;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

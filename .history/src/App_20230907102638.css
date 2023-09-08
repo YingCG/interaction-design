@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  padding: 1em;
+  height: 100vh;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 10rem solid transparent;
+  border-bottom: 10rem solid transparent;
+
+  border-left: 10rem solid green;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 10rem solid transparent;
+  border-bottom: 10rem solid transparent;
+
+  border-right: 10rem solid blue;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.text-content {
+  padding: 3em;
+}
+
+.triple-diamond {
+  display: flex;
+  width: 50%;
+}
