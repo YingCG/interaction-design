@@ -4,12 +4,11 @@ import ProjectOverview from "./ProjectOverview";
 // import Research from "./Research";
 
 function TripleDiamond() {
-  const [info, setInfo] = useState([]);
-
-  function showInfo(contents) {
-    console.log(contents);
-    setInfo(contents);
-  }
+  const [info, setInfo] = useState({
+    Title: 'default value',
+    Description: 'default value',
+    hide: true
+  });
 
   return (
     <>
@@ -21,9 +20,7 @@ function TripleDiamond() {
           <h2 className="text-above">Research</h2>
           <div
             className="triple-diamond"
-            onClick={() =>
-              showInfo(contents[1].Title + <p>{contents[1].Description}</p>)
-            }
+            onClick={() => setInfo(contents[1])}
           >
             <div className="arrow-left"></div>
             <div className="arrow-right"></div>
@@ -34,7 +31,7 @@ function TripleDiamond() {
           <h2 className="text-above">Experiment</h2>
           <div
             className="triple-diamond"
-            onClick={() => showInfo(contents[2].Title)}
+            onClick={() => setInfo(contents[2])}
           >
             <div className="arrow-left"></div>
             <div className="arrow-right"></div>
@@ -45,14 +42,17 @@ function TripleDiamond() {
           <h2 className="text-above">Testing</h2>
           <div
             className="triple-diamond"
-            onClick={() => showInfo(contents[3].entries)}
+            onClick={() => setInfo(contents[3])}
           >
             <div className="arrow-left"></div>
             <div className="arrow-right"></div>
           </div>
         </div>
       </div>
-      <div className="information">{info}</div>
+      {!info.hide && <div className="information">
+        <p>{info.Title}</p>
+        <p>{info.Description}</p>
+      </div>}
     </>
   );
 }
