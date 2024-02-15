@@ -4,7 +4,9 @@
   height: 100vh;
 }
 
-h1,h2, h3{
+h1,
+h2,
+h3 {
   font-weight: 300;
 }
 
@@ -13,10 +15,18 @@ h1,h2, h3{
   height: 0;
   border-top: 11rem solid transparent;
   border-bottom: 11rem solid transparent;
-  border-left: 11rem solid #191D88;
+  border-left: 11rem solid #191d88;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.arrow-text {
+  color: white;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 .arrow-right:hover {
-  border-left: 11rem solid #45FFCA;
+  border-left: 11rem solid #45ffca;
 }
 
 .arrow-left {
@@ -24,10 +34,13 @@ h1,h2, h3{
   height: 0;
   border-top: 11rem solid transparent;
   border-bottom: 11rem solid transparent;
-  border-right: 11rem solid #FF6969;
+  border-right: 11rem solid #ff6969;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .arrow-left:hover {
-  border-right: 11rem solid #FFA1F5;
+  border-right: 11rem solid #ffa1f5;
 }
 
 .container {
@@ -37,9 +50,13 @@ h1,h2, h3{
   width: 100%;
 }
 
+h1.text-content {
+  padding: 1em;
+  font-weight: 300;
+  flex-direction: column;
+}
 .text-content {
   padding: 1em;
-  font-size: 3.5em;
   font-weight: 300;
   flex-direction: column;
 }
@@ -56,4 +73,15 @@ h1,h2, h3{
 
 .text-above {
   flex-direction: column;
+}
+
+.design-process {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.research-steps {
+  text-align: left;
+  padding: 0.5rem;
 }
